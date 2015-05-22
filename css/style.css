@@ -127,8 +127,7 @@ section {
 }
 .slogan {
   position: relative;
-  /*height: 80px;*/
-  /*overflow: hidden;*/
+  left: -2px;
 }
 .slogan .mt {
   font-family: mtco, Arial, serif;
@@ -136,11 +135,18 @@ section {
   margin-bottom: 10px;
 }
 .slogan .mt > span {
-  letter-spacing: 13px;
+  margin-right: 13px;
 }
-
-.slogan .mt > span:first-child {
-  margin-right: 20px;
+.slogan .mt > span:last-child {
+  margin: 0;
+}
+.slogan .mt > span:nth-child(1), .slogan .mt > span:nth-child(2),
+.slogan .mt > span:nth-child(3), .slogan .mt > span:nth-child(4) {
+  position: relative;
+  left: 2px;
+}
+.slogan .mt > span:nth-child(4) {
+  margin-right: 33px;
 }
 
 .slogan .code {
@@ -761,6 +767,25 @@ section[role="banner"] {
   margin-bottom: 3.428571429rem;
 }
 
+/* Footer */
+footer[role="contentinfo"] {
+  border-top: 1px solid #ededed;
+  clear: both;
+  font-size: 12px;
+  line-height: 2;
+  max-width: 960px;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px 0;
+}
+footer[role="contentinfo"] a {
+  color: #686868;
+}
+footer[role="contentinfo"] a:hover {
+  color: #21759b;
+}
+
 /* =Main content and comment content
 -------------------------------------------------------------- */
 
@@ -1057,9 +1082,7 @@ img.aligncenter,
 }
 footer.entry-meta {
   margin-top: 24px;
-  margin-top: 1.714285714rem;
   font-size: 13px;
-  font-size: 0.928571429rem;
   line-height: 1.846153846;
   color: #757575;
 }
@@ -1166,13 +1189,11 @@ article.format-aside p:last-child {
 /* Image posts */
 article.format-image footer h1 {
   font-size: 13px;
-  font-size: 0.928571429rem;
   line-height: 1.846153846;
   font-weight: normal;
 }
 article.format-image footer h2 {
   font-size: 11px;
-  font-size: 0.785714286rem;
   line-height: 2.181818182;
 }
 article.format-image footer a h2 {
@@ -1182,10 +1203,8 @@ article.format-image footer a h2 {
 /* Link posts */
 article.format-link header {
   padding: 0 10px;
-  padding: 0 0.714285714rem;
   float: right;
   font-size: 11px;
-  font-size: 0.785714286rem;
   line-height: 2.181818182;
   font-weight: bold;
   font-style: italic;
@@ -1547,9 +1566,19 @@ img#wpstats {
   .slogan {
     text-align: center;
     width: 100%;
+    left: 0;
+  }
+  .slogan .mt {
+    position: relative;
+    left: -3px;
   }
   .slogan .code {
     left: -5px;
+  }
+  .slogan .mt > span:nth-child(1), .slogan .mt > span:nth-child(2),
+  .slogan .mt > span:nth-child(3), .slogan .mt > span:nth-child(4) {
+    position: relative;
+    left: 0px;
   }
 
   .main-navigation {
@@ -1798,6 +1827,5 @@ img#wpstats {
   .comments-area article header cite,
   .comments-area article header time {
     margin-left: 50px;
-    margin-left: 3.57142857rem;
   }
 }
